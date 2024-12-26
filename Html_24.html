@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+
+<body>
+    <h1>The Element Object</h1>
+    <h5>The accessKey</h5>
+
+    <p>The accesskey attribute specifies a shortcut key to activate/focus an element:</p>
+
+    <a id="As" href="https://www.Aspiresystems.com/">Aspire Systems</a><br>
+    <script>
+        document.getElementById("As").accessKey = "a";
+
+    </script>
+    <h5>addEventListener</h5>
+
+    <button id="myBtn">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+        const element = document.getElementById("myBtn");
+        element.addEventListener("click", function () {
+            document.getElementById("demo").innerHTML = "Hello World";
+        });
+    </script>
+    <script>
+        document.write("Hello World!");
+    </script>
+
+    <p>The number of script elements in the document:</p>
+
+    <script>
+        document.getElementById("demo").innerHTML = document.scripts.length;
+    </script>
+
+    <h5>The anchors Property</h5>
+
+    <a name="html">HTML Tutorial</a><br>
+    <a name="css">CSS Tutorial</a><br>
+    <a name="xml">XML Tutorial</a><br>
+
+    <p>The content of the first anchor in this document is:</p>
+
+    <p id="dem"></p>
+
+    <script>
+        let content = document.anchors[0].innerHTML;
+        document.getElementById("dem").innerHTML = content;
+    </script>
+    <h5>The getElementById() Method</h5>
+    <p id="d"></p>
+
+    <script>
+        document.getElementById("d").innerHTML = "Hello World";
+    </script>
+    <script>
+        const myElement = document.getElementById("demo");
+        myElement.style.color = "red";
+        </script>
+</body>
+
+</html>
