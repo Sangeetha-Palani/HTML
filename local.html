@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Local storage</h1>
+    <input type = "text" id="username" >
+    <button onclick = "saveData()">Save Username</button>
+    <button onclick ="loadData()">Load Username</button>
+    <button onclick ="removeData()">Remove Username</button>
+    <script>
+        function saveData(){
+            const username = document.getElementById('username').value;
+            localStorage.setItem('username', username);
+        }
+        function loadData(){
+            const username = localStorage.getItem ('username');
+        if(username){
+            document.getElementById('output').textContent='stored Username';
+        }     
+        else{
+            document.getElementById('output').textContent='no username in localstorage';
+
+    }   
+} 
+        function removeData(){
+            localStorage.removeItem('username');
+            document.getElementById('output').textContent='username removed from localstorage';
+        }
+
+    </script>
+</body>
+</html>
